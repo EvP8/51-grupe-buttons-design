@@ -1,18 +1,19 @@
 body {
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
     background-color: slategray;
+    margin: 0;
+    padding: 20px;
 }
 
 .main {
     width: 800px;
-    height: 800px;
-    margin-left: calc(50% - 400px);
     background-color: white;
     padding: 20px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between sections */
 }
 
 .header-line {
@@ -21,11 +22,9 @@ body {
     margin-bottom: 20px;
 }
 
-.header-line h1 {
-    text-transform: uppercase;
+.header-line h2 {
     margin: 0;
     padding-right: 10px;
-    white-space: nowrap;
 }
 
 .header-line hr {
@@ -45,75 +44,157 @@ th, td {
     border: none;
     padding: 10px;
     text-align: center;
-    width: 15%;
 }
 
 th {
-    display: flexbox;
-    justify-content:space-between;
     text-transform: uppercase;
     color: lightgray;
     font-weight: bold;
 }
 
-TT1 {
+.TT1 {
     text-align: left;
-    width: 25%;
 }
-
 
 tbody tr:nth-child(even):not(:first-child) {
     background-color: #f2f2f2;
 }
 
-.btn {
+/* General Button Styling */
+.btn, .btn2 {
     display: inline-block;
-    padding: 0;
     border: 2px solid transparent;
     cursor: pointer;
-    background-color: #7197FA;
-    color: white;
     border-radius: 3px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    line-height: 20px;
     text-align: center;
+    vertical-align: middle;
     user-select: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn:hover {
+/* Button Sizes */
+.btn.L-btn, .btn2.L-btn {
+    height: 48px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.btn.M-btn, .btn2.M-btn {
+    height: 36px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.btn.S-btn, .btn2.S-btn {
+    height: 28px;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.btn.XS-btn, .btn2.XS-btn {
+    height: 20px;
+    padding: 0px;
+    font-size: 10px;
+}
+
+/* Solid Button Styles */
+.btn2.primary {
+    background-color: #007bff; /* Melino spalvos */
+    border-color: #007bff;
+    color: white;
+}
+
+.btn2.dark {
+    background-color: #343a40; /* Juodas */
+    border-color: #343a40;
+    color: white;
+}
+
+.btn2.info {
+    background-color: #6f42c1; /* Violetinis */
+    border-color: #6f42c1;
+    color: white;
+}
+
+.btn2.success {
+    background-color: #28a745; /* Žalias */
+    border-color: #28a745;
+    color: white;
+}
+
+.btn2.warning {
+    background-color: #ffc107; /* Oranžinis */
+    border-color: #ffc107;
+    color: black;
+}
+
+.btn2.danger {
+    background-color: #dc3545; /* Raudonas */
+    border-color: #dc3545;
+    color: white;
+}
+
+/* Hover and Active States for Buttons */
+.primary:hover, .dark:hover, .info:hover, .success:hover, .warning:hover, .danger:hover {
     background-color: white;
-    color: #7197FA;
-    border-color: #7197FA;
+    color: inherit;
+    border-color: inherit;
 }
 
-.btn:active {
+.primary:active, .dark:active, .info:active, .success:active, .warning:active, .danger:active {
     background-color: #5a7bbf;
     border-color: #5a7bbf;
     color: greenyellow;
 }
 
-.btn.L-btn {
-    height: 48px;
-    padding: 14px 20px;
-    font-size: 16px;   
+/* Disabled Button Styles */
+.disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    border-color: #d6d6d6;
+    cursor: not-allowed;
 }
 
-.btn.M-btn {
-    height: 36px;
-    padding: 8px 12px;
-    font-size: 14px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.btn.S-btn { 
-    height: 28px;
-    padding: 4px 8px;
-    font-size: 12px;
-
+.column {
+    flex: 1;
+    min-width: 150px;
 }
 
-.btn.XS-btn {
-    height: 20px;
-    padding: 0px 6px;
-    font-size: 10px;
+.column p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header-line-h2 {
+    margin-bottom: 30px;
+}
+
+/* Specific button2 styles for solid colors and states */
+.btn2 {
+    background-color: #7197FA; /* Default color */
+    border-color: #7197FA;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: white;
+    border-color: #7197FA;
+    color: #7197FA;
+}
+
+.btn2:active {
+    background-color: #5a7bbf;
+    border-color: #5a7bbf;
+    color: greenyellow;
 }
