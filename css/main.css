@@ -13,7 +13,7 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Space between sections */
+    gap: 30px; 
 }
 
 .header-line {
@@ -56,11 +56,15 @@ th {
     text-align: left;
 }
 
+header-line-h2:nth-of-type(2) h2,
+.header-line-h2:nth-of-type(3) h2 {
+    margin-top: 30px; 
+}
+
 tbody tr:nth-child(even):not(:first-child) {
     background-color: #f2f2f2;
 }
 
-/* General Button Styling */
 .btn, .btn2 {
     display: inline-block;
     border: 2px solid transparent;
@@ -75,85 +79,84 @@ tbody tr:nth-child(even):not(:first-child) {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 20px;
+    padding: 5px;
+    width: 150px;
+    height: 30px;
 }
 
-/* Button Sizes */
-.btn.L-btn, .btn2.L-btn {
+.btn.L-btn {
     height: 48px;
     padding: 14px;
     font-size: 16px;
+    width: 76px;
 }
 
-.btn.M-btn, .btn2.M-btn {
+.btn.M-btn {
     height: 36px;
     padding: 8px;
     font-size: 14px;
+    width: 66px;
 }
 
-.btn.S-btn, .btn2.S-btn {
+.btn.S-btn {
     height: 28px;
     padding: 4px;
     font-size: 12px;
+    width: 58px;
 }
 
-.btn.XS-btn, .btn2.XS-btn {
+.btn.XS-btn {
     height: 20px;
-    padding: 0px;
+    padding: 0 5px;
     font-size: 10px;
+    width: 46px; 
+    line-height: 20px; 
 }
 
-/* Solid Button Styles */
 .btn2.primary {
-    background-color: #007bff; /* Melino spalvos */
+    background-color: #007bff;
     border-color: #007bff;
     color: white;
 }
 
 .btn2.dark {
-    background-color: #343a40; /* Juodas */
+    background-color: #343a40; 
     border-color: #343a40;
     color: white;
 }
 
 .btn2.info {
-    background-color: #6f42c1; /* Violetinis */
+    background-color: #6f42c1; 
     border-color: #6f42c1;
     color: white;
 }
 
 .btn2.success {
-    background-color: #28a745; /* Žalias */
+    background-color: #28a745; 
     border-color: #28a745;
     color: white;
 }
 
 .btn2.warning {
-    background-color: #ffc107; /* Oranžinis */
+    background-color: #ffc107; 
     border-color: #ffc107;
     color: black;
 }
 
 .btn2.danger {
-    background-color: #dc3545; /* Raudonas */
+    background-color: #dc3545; 
     border-color: #dc3545;
     color: white;
 }
 
-/* Hover and Active States for Buttons */
-.primary:hover, .dark:hover, .info:hover, .success:hover, .warning:hover, .danger:hover {
+.hover-column .btn2:hover {
     background-color: white;
     color: inherit;
     border-color: inherit;
 }
 
-.primary:active, .dark:active, .info:active, .success:active, .warning:active, .danger:active {
-    background-color: #5a7bbf;
-    border-color: #5a7bbf;
-    color: greenyellow;
-}
-
-/* Disabled Button Styles */
-.disabled {
+.disabled-column .btn2.disabled {
     background-color: #e9ecef;
     color: #6c757d;
     border-color: #d6d6d6;
@@ -163,7 +166,7 @@ tbody tr:nth-child(even):not(:first-child) {
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; 
 }
 
 .column {
@@ -174,27 +177,113 @@ tbody tr:nth-child(even):not(:first-child) {
 .column p {
     font-weight: bold;
     margin-bottom: 10px;
+    color: #ACACB4;
 }
 
 .header-line-h2 {
     margin-bottom: 30px;
 }
 
-/* Specific button2 styles for solid colors and states */
-.btn2 {
-    background-color: #7197FA; /* Default color */
-    border-color: #7197FA;
+.btn {
+    padding: 0.3em 1em;
     color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border: 0.1em solid black;
+    user-select: none;   
+    cursor: pointer;
+    background-color: #7197FA;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
 }
 
-.btn2:hover {
-    background-color: white;
-    border-color: #7197FA;
-    color: #7197FA;
+.btn2 {
+    margin: 10px;
+    width: 150px;
 }
 
-.btn2:active {
-    background-color: #5a7bbf;
-    border-color: #5a7bbf;
-    color: greenyellow;
+.active-column .btn2 {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.active-column .btn2.dark {
+    background-color: #23272b;
+    border-color: #23272b;
+}
+
+.active-column .btn2.info {
+    background-color: #5a2a8b;
+    border-color: #5a2a8b;
+}
+
+.active-column .btn2.success {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+}
+
+.active-column .btn2.warning {
+    background-color: #e0a800; 
+    border-color: #e0a800;
+}
+
+.active-column .btn2.danger {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.disabled-column .btn2 {
+    background-color: #b0b0b0;
+    border-color: #b0b0b0;
+    color: #6c757d; 
+    cursor: not-allowed;
+}
+
+.disabled-column .btn2.primary {
+    background-color: #b3d0ff;
+    border-color: #b3d0ff;
+    color: #6c757d;
+}
+
+.disabled-column .btn2.dark {
+    background-color: #d6d6d6;
+    border-color: #d6d6d6;
+    color: #6c757d;
+}
+
+.disabled-column .btn2.info {
+    background-color: #e0b7f0;
+    border-color: #e0b7f0;
+    color: #6c757d;
+}
+
+.disabled-column .btn2.success {
+    background-color: #b9f0b7; 
+    border-color: #b9f0b7;
+    color: #6c757d;
+}
+
+.disabled-column .btn2.warning {
+    background-color: #ffe0b3;
+    border-color: #ffe0b3;
+    color: #6c757d;
+}
+
+.disabled-column .btn2.danger {
+    background-color: #f0b7b7; 
+    border-color: #f0b7b7;
+    color: #6c757d;
+}
+
+.button-icons .column a {
+    padding: 8px;
+    margin: 5px;
+}
+
+.icon {
+    margin: 0 4px;
 }

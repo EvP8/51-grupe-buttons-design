@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>51 grupe button design</title>
+    <title>51 Grupa Button Design</title>
     <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
     <main class="main">
+
         <section>
             <div class="header-line header-line-h2">
                 <h2>Button Sizes</h2>
@@ -60,13 +63,14 @@
                 </tbody>
             </table>
         </section>
+
         <section>
             <div class="header-line header-line-h2">
                 <h2>Solid Button</h2>
                 <hr>
             </div>
             <div class="container">
-                <div class="column">
+                <div class="column natural-column">
                     <p>Natural</p>
                     <a href="#" class="btn2 primary">Primary</a>
                     <a href="#" class="btn2 dark">Dark</a>
@@ -75,20 +79,83 @@
                     <a href="#" class="btn2 warning">Warning</a>
                     <a href="#" class="btn2 danger">Danger</a>
                 </div>
-                <div class="column">
+                <div class="column hover-column">
                     <p>Hover</p>
-                    <a href="#" class="btn2 primary hover">Primary</a>
-                    <a href="#" class="btn2 dark hover">Dark</a>
-                    <a href="#" class="btn2 info hover">Info</a>
-                    <a href="#" class="btn2 success hover">Success</a>
-                    <a href="#" class="btn2 warning hover">Warning</a>
-                    <a href="#" class="btn2 danger hover">Danger</a>
+                    <a href="#" class="btn2 primary">Primary</a>
+                    <a href="#" class="btn2 dark">Dark</a>
+                    <a href="#" class="btn2 info">Info</a>
+                    <a href="#" class="btn2 success">Success</a>
+                    <a href="#" class="btn2 warning">Warning</a>
+                    <a href="#" class="btn2 danger">Danger</a>
                 </div>
-                <div class="column">
+                <div class="column active-column">
                     <p>Active</p>
-                    <a href="#" class="btn2 primary active">Primary</a>
-                    <a href="#" class="btn2 dark active">Dark</a>
-                    <a href="#" class="btn2 info active">Info</a>
-                    <a href="#" class="btn2 success active">Success</a>
-                    <a href="#" class="btn2 warning active">Warning</a>
-                    <a href="#" class="btn2 danger active">Danger
+                    <a href="#" class="btn2 primary">Primary</a>
+                    <a href="#" class="btn2 dark">Dark</a>
+                    <a href="#" class="btn2 info">Info</a>
+                    <a href="#" class="btn2 success">Success</a>
+                    <a href="#" class="btn2 warning">Warning</a>
+                    <a href="#" class="btn2 danger">Danger</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disabled Buttons Section -->
+        <section>
+            <div class="header-line header-line-h2">
+                <h2>Disabled Button</h2>
+                <hr>
+            </div>
+            <div class="container disabled-column">
+                <div class="column">
+                    <p>Disabled</p>
+                    <a href="#" class="btn2 primary disabled" aria-disabled="true">Primary</a>
+                    <a href="#" class="btn2 dark disabled" aria-disabled="true">Dark</a>
+                    <a href="#" class="btn2 info disabled" aria-disabled="true">Info</a>
+                    <a href="#" class="btn2 success disabled" aria-disabled="true">Success</a>
+                    <a href="#" class="btn2 warning disabled" aria-disabled="true">Warning</a>
+                    <a href="#" class="btn2 danger disabled" aria-disabled="true">Danger</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="header-line header-line-h2">
+                <h2>Button Icons</h2>
+                <hr>
+            </div>
+            <div class="container button-icons">
+                <div class="column icon-label-before">
+                    <p class="TT1">LABEL - BEFORE</p>
+                    <a href="#" class="btn L-btn">
+                        <i class="fas fa-star icon"></i>Label icon
+                    </a>
+                    <a href="#" class="btn M-btn">
+                        <i class="fas fa-star icon"></i>Label icon
+                    </a>
+                    <a href="#" class="btn S-btn">
+                        <i class="fas fa-star icon"></i>Label icon
+                    </a>
+                    <a href="#" class="btn XS-btn">
+                        <i class="fas fa-star icon"></i>Label icon
+                    </a>
+                </div>
+                <div class="column icon-action-after">
+                    <p class="TT1">ACTION - AFTER</p>
+                    <a href="#" class="btn L-btn">
+                        Action icon<i class="fas fa-arrow-right icon"></i>
+                    </a>
+                    <a href="#" class="btn M-btn">
+                        Action icon<i class="fas fa-arrow-right icon"></i>
+                    </a>
+                    <a href="#" class="btn S-btn">
+                        Action icon<i class="fas fa-arrow-right icon"></i>
+                    </a>
+                    <a href="#" class="btn XS-btn">
+                        Action icon<i class="fas fa-arrow-right icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
